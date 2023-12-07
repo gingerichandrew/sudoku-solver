@@ -1,11 +1,10 @@
-# Imports
 import sys
 import pygame
 from pygame_button import *
 from solve_sudoku import *
 from pygame import mixer
 import time
-# Configuration
+
 pygame.init()
 pygame.display.set_caption('Sudoku Solver')
 fps = 60
@@ -77,13 +76,16 @@ def create_value_grid():
     update_grid_visual(solution)
 
 
-
 def create_solve_button():
     solve_button = Button(screen, objects, 30, 385, 330, 50, 0, "Solve", create_value_grid,
                          None, False)
+
+
 def reset_grid_button():
     reset_button = Button(screen, objects, 30, 450, 330, 50, 0, "Reset", reset_grid,
                          None, False)
+
+
 def create_button_grid():
     x, y = 30, 30
     b_width, b_height = 100, 100
@@ -123,7 +125,7 @@ create_game_grid()
 create_solve_button()
 reset_grid_button()
 
-# Game loop.
+
 while True:
     screen.fill((20, 20, 20))
     for event in pygame.event.get():
