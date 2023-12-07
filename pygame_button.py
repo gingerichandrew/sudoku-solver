@@ -80,29 +80,3 @@ class Button():
             self.buttonRect.height / 2 - self.button_surf.get_rect().height / 2
         ])
         self.screen.blit(self.buttonSurface, self.buttonRect)
-
-
-# def create_game_grid():
-#     x, y = 400, 30
-#     current_left = x
-#     current_y = y
-#     b_width, b_height = 50, 50
-#     margin = 2
-#     for i in range(9):
-#         if i % 3 == 0 and i != 0:
-#             current_y += ((b_height + margin) * 3) + margin * 2
-#             x = 400
-#         y = current_y
-#         current_left = x
-#         block = []
-#         for i in range(9):
-#             if i % 3 == 0 and i != 0:
-#                 y += b_height + margin
-#                 x = current_left
-#             button_id = randint(0, 100000)
-#             block.append(button_id)
-#             grid_button = Button(screen, objects, x, y, b_width, b_height, button_id, " ", return_button_clicked,
-#                                  button_id, False)
-#             x += b_width + margin
-#             grid.append(block)
-#         x += margin * 2
